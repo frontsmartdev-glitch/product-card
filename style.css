@@ -1,10 +1,11 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-size: 13px;
+    line-height: 18px;
     
 }
 
-.products_list {
+.products__list {
     list-style: none;
     /* display: flex;
     gap: 20px; */
@@ -12,7 +13,7 @@ body {
     padding: 0;
 }
 
-.products_title {
+.products__title {
     font-size: 70px;
     font-weight: 400;
     line-height: 70px;
@@ -21,8 +22,7 @@ body {
     color: #515076;
 }
 
-.main_text {
-    font-size: 13px;
-    line-height: 18px;
+.product-card__compound-title {
+    
     color: #515076;
 }
