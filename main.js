@@ -1,22 +1,24 @@
+'use strict'; //Чтобы JS работал в строгом режиме, что позволяет избежать ошибок в коде чтобы бил по рукам если что-то не так. Например, если вы случайно забыли объявить переменную, JS выдаст ошибку, а не создаст глобальную переменную.
+
 // Покраска всех карточек в зеленый цвет
 
 const productCards = document.querySelectorAll('.product-card');
-const changeAllCardColorButton = document.querySelector('#change-color-all-card');
-const greenColorHash = '#00FF00';
-const blueColorHash = '#0000FF';
+const changeAllColorCardsButton = document.querySelector('#change-all-cards-color');
+const greenColorHex = '#00FF00';
+const blueColorHex = '#0000FF';
 
-changeAllCardColorButton.addEventListener('click', () => {
-    productCards.forEach(card => {card.style.backgroundColor = greenColorHash;
+changeAllColorCardsButton.addEventListener('click', () => {
+    productCards.forEach(card => {card.style.backgroundColor = greenColorHex;
     });
     });
 
 // Покраска первой карточки
 
 const firstProductCard = document.querySelector('.product-card');
-const changeFirstCardColorButton = document.querySelector('#change-color-first-card');
+const changeFirstCardColorButton = document.querySelector('#change-first-card-color');
 
 changeFirstCardColorButton.addEventListener('click', () => {
-    firstProductCard.style.backgroundColor = blueColorHash;
+    firstProductCard.style.backgroundColor = blueColorHex;
 });
 
 // Открытие Google в новой вкладке
@@ -38,7 +40,7 @@ function openGoogle() {
 
 // Вывод в консоль лог
 
-const outputToConsoleLogButton = document.querySelector('#output-to-console-log');
+const outputToConsoleLogButton = document.querySelector('#log-to-console');
 
 outputToConsoleLogButton.addEventListener('click', () => outputToConsoleLog('Homework: No6'));
     
@@ -46,3 +48,31 @@ function outputToConsoleLog(message) {
     alert(message);
     console.log(message);
 }
+
+const productTitle = document.querySelector('.products__title');
+productTitle.addEventListener('mouseover', (event) => {
+    console.log(event.target.textContent);
+});
+
+const changeReturnColorButton = document.querySelector('#change-return-color');
+changeReturnColorButton.addEventListener('click',  () => { 
+    changeReturnColorButton.classList.toggle('active');
+});
+
+
+// let str ='Hello Word'
+// console.log(str. toLowerCase()) Делает все буквы в строке маленькими
+// console.log(str)
+
+// let a = 6
+// let b = "2"
+// console.log(a + b) Прикол в том, что JS складывает числа и строки, превращая число в строку. В итоге получается 62, а не 8
+
+// let str = 'Hello Word'
+// console.log(str.length) показывает количество символов в строке
+// console.log(str.length-1) переход к предпослледнему символу строки
+// console.log(str[0]) показывает первый символ строки
+// console.log(str.trim()) убирает пробелы в начале и в конце строки
+
+// console.dir(document) глубокий просмотр объекта document, можно увидеть все его свойства и методы
+// console.log('<body>:', document.body) показывает тело документа')

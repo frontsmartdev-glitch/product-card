@@ -104,3 +104,12 @@ body {
     list-style-position: inside;
 }
 
+#change-return-color {
+    background-color: white;
+    transition: background-color 0.3s ease; /* Первый цвет */
+}
+
+#change-return-color.active {
+    background-color: purple; /* Второй цвет */
+}
+
