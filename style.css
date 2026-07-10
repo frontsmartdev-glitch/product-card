@@ -14,7 +14,7 @@ body {
 .products {
     max-width: 1110px;
     margin: 0 auto;
-    background-image: url(../img/bg\ 1.png);
+    background-image: url('../img/bg_flowers.png');
     background-repeat: no-repeat;
     background-size: 790px 697px;
 }
@@ -87,25 +87,16 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
-}
-.product-card__price-label {
     font-size: 20px;
     line-height: 24px;
 }
-
-.product-card__price {
-    font-size: 20px;
-    line-height: 24px;
-}   
 
 .product-card__compound-list {
-    margin: 0;
     padding-left: 0;
     list-style-position: inside;
 }
 
-#change-return-color {
-    
+#change-return-color { 
     transition: background-color 0.3s ease; /* Первый цвет */
 }
 
