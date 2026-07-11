@@ -148,9 +148,9 @@ body {
 .product-card__button-wrapper {
     display: flex;
     justify-content: center;
-    margin-left: -20px;
+    /* margin-left: -20px; */
 }
 
-/* .product-card__footer {
+.product-card__footer {
     margin-top: auto;
-} */
+}
