@@ -132,13 +132,13 @@ body {
     outline: none;
 }
 
-.product-card__buy-button:focus {
+.product-card__buy-button:hover {
     box-shadow: 
         0 1px 1px 0 rgba(0, 0, 0, 0.1),
         0 0 0 1px rgba(70, 79, 96, 0.32);;
 }
 
-.product-card__buy-button:hover {
+.product-card__buy-button:focus {
     box-shadow: 
         0 1px 1px 0 rgba(0, 0, 0, 0.1),
         0 0 0 1px rgba(70, 79, 96, 0.32),
@@ -151,6 +151,6 @@ body {
     margin-left: -20px;
 }
 
-.product-card__footer {
+/* .product-card__footer {
     margin-top: auto;
-}
+} */
