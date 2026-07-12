@@ -4,11 +4,11 @@
 
 const productCards = document.querySelectorAll('.product-card');
 const changeAllColorCardsButton = document.querySelector('#change-all-cards-color');
-const greenColorHex = '#00FF00';
-const blueColorHex = '#0000FF';
+const goldColorHex = '#FFD700';
+const aquaColorHex = '#00FFFF';
 
 changeAllColorCardsButton.addEventListener('click', () => {
-    productCards.forEach(card => {card.style.backgroundColor = greenColorHex;
+    productCards.forEach(card => {card.style.backgroundColor = goldColorHex;
     });
     });
 
@@ -18,7 +18,7 @@ const firstProductCard = document.querySelector('.product-card');
 const changeFirstCardColorButton = document.querySelector('#change-first-card-color');
 
 changeFirstCardColorButton.addEventListener('click', () => {
-    firstProductCard.style.backgroundColor = blueColorHex;
+    firstProductCard.style.backgroundColor = aquaColorHex;
 });
 
 // Открытие Google в новой вкладке

@@ -104,3 +104,26 @@ body {
     background-color: purple; /* Второй цвет */
 }
 
+.btns-wrapper {
+    display: flex;            /* Выстраивает кнопки в одну строку */
+    justify-content: center;  /* Центрирует всю группу кнопок (или space-between) */
+    gap: 15px;                /* Создает красивые отступы между кнопками */
+    flex-wrap: wrap;          /* Позволяет кнопкам переноситься, если экран узкий */
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #515076;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #A5A3B9;
+    cursor: pointer;
+}
