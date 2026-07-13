@@ -89,11 +89,6 @@ body {
     padding: 15px 0 5px 0;
 }
 
-.product-card__compound-item {
-    font-size: 13px;
-    line-height: 18px;   
-}
-
 .product-card__price-wrapper {
     display: flex;
     justify-content: space-between;
