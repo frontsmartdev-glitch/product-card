@@ -8,9 +8,10 @@ const goldColorHex = '#FFD700';
 const aquaColorHex = '#00FFFF';
 
 changeAllColorCardsButton.addEventListener('click', () => {
-    productCards.forEach(card => {card.style.backgroundColor = goldColorHex;
+    productCards.forEach(card => {
+        card.style.backgroundColor = goldColorHex;
     });
-    });
+});
 
 // Покраска первой карточки
 
@@ -25,14 +26,13 @@ changeFirstCardColorButton.addEventListener('click', () => {
 
 const openGoogleButton = document.querySelector('#open-google');
 
-openGoogleButton.addEventListener('click', openGoogle  
-,);
+openGoogleButton.addEventListener('click', openGoogle,);
 
 function openGoogle() {
     const confirmOpen = confirm('Вы уверены, что хотите открыть Google?');
     
     if (confirmOpen === true) {
-        window.open('https://www.google.com')
+        window.open('https://www.google.com');
     } else {
         return;
     }
@@ -58,21 +58,3 @@ const changeReturnColorButton = document.querySelector('#change-return-color');
 changeReturnColorButton.addEventListener('click',  () => { 
     changeReturnColorButton.classList.toggle('active');
 });
-
-
-// let str ='Hello Word'
-// console.log(str. toLowerCase()) Делает все буквы в строке маленькими
-// console.log(str)
-
-// let a = 6
-// let b = "2"
-// console.log(a + b) Прикол в том, что JS складывает числа и строки, превращая число в строку. В итоге получается 62, а не 8
-
-// let str = 'Hello Word'
-// console.log(str.length) показывает количество символов в строке
-// console.log(str.length-1) переход к предпослледнему символу строки
-// console.log(str[0]) показывает первый символ строки
-// console.log(str.trim()) убирает пробелы в начале и в конце строки
-
-// console.dir(document) глубокий просмотр объекта document, можно увидеть все его свойства и методы
-// console.log('<body>:', document.body) показывает тело документа')
