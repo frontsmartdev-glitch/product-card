@@ -26,7 +26,7 @@ changeFirstCardColorButton.addEventListener('click', () => {
 
 const openGoogleButton = document.querySelector('#open-google');
 
-openGoogleButton.addEventListener('click', openGoogle,);
+openGoogleButton.addEventListener('click', openGoogle);
 
 function openGoogle() {
     const confirmOpen = confirm('Вы уверены, что хотите открыть Google?');
@@ -55,6 +55,6 @@ productTitle.addEventListener('mouseover', (event) => {
 });
 
 const changeReturnColorButton = document.querySelector('#change-return-color');
-changeReturnColorButton.addEventListener('click',  () => { 
+changeReturnColorButton.addEventListener('click', () => { 
     changeReturnColorButton.classList.toggle('active');
 });
