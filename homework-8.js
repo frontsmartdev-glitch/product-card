@@ -54,7 +54,7 @@ showCarValue(carOwner, "model");
 let vegetables = ["Картошка", "Огурец", "Помидор", "Капуста"];
 
 // 8 Создать массив, состоящий из объектов, где объект представляет собой книгу (название, автор, год выпуска, цвет обложки, жанр) (3-5 книг). После, используя известный нам метод массив, добавить еще одну книгу в конец списка. Можете заменить книги на фильмы, или другую сущность, идею вы поняли.
-let moviesJackieChan = [
+let  jackieChanMovies = [
     {
         title: "Кунг-фу жеребец",
         releaseYear: 2023,
@@ -81,20 +81,20 @@ let moviesJackieChan = [
     }
 ];
 
-    moviesJackieChan.push({
+    jackieChanMovies.push({
         title: "Земля: Один потрясающий день",
         releaseYear: 2018,
         mainActor: ["Роберт Редфорд","Джеки Чан"],
         director: ["Ричард Дэйл","Фань Лисинь", "Питер Уэббер"],
         genre: "Документальный",
         duration: 60
-    }
+}
 );
-console.log(moviesJackieChan);
+console.log( jackieChanMovies);
 
 // 9 Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной (Гарри Поттер, Марвел и так далее). (Если используете другую, свою сущность - импровизируйте). С помощью известного нам метода массива или оператора (рекомендую использовать оператор), объединить эти два массива в один
 
-let moviesMarvel = [
+let marvelMovies = [
     {
         title: "Железный человек",
         releaseYear: 2008,
@@ -122,8 +122,8 @@ let moviesMarvel = [
 ];
 
 let allMovies = [
-    ...moviesJackieChan,
-    ...moviesMarvel
+    ...jackieChanMovies,
+    ...marvelMovies
 ];
 
 console.log(allMovies);
@@ -131,7 +131,7 @@ console.log(allMovies);
 
 // 10 Почитать про метод массива — map. Написать функцию, которая принимает массив сущностей с задания №9. Добавляем новое свойство для объекта "isRare (это редкий)" и в зависимости от года выпуска книги (или какой-то логики, связанной с вашей сущностью), устанавливаем true или false. Что я хочу этим сказать: если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
 
-function addRareProperty(movies) {
+    function addRareProperty(movies) {
     return movies.map(movie => {
     return { ...movie, isRare: movie.releaseYear > 2000 };
     });
