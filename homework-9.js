@@ -36,6 +36,71 @@ console.log(comments);
 
 // Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 const commentsWithCom = comments.filter(comment => comment.email.includes('.com'))
-const commentsWithCom1 = comments.filter(comment => comment.email.includes('.com') &&  comment.postId === 1);
 console.log(commentsWithCom)
-console.log(commentsWithCom1)
+
+// Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
+
+
+const updateComment = comments.map((comment) => {
+    if (comment.id <= 5) {
+        return {
+            ...comment,
+            postId: 2,
+        };
+    } else {
+        return {
+            ...comment,
+            postId: 1,
+        };
+    }
+});
+
+console.log(updateComment)
+
+// Перебрать массив, что бы объекты состояли только из айди и имени
+
+const shortComment = comments.map((comment) => {
+    return {
+        id: comment.id,
+        name: comment.name,
+    };
+});
+
+console.log(shortComment)
+
+
+// Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
+
+const checkedComments = comments.map((comment) => {
+    return {
+        ...comment,
+        isInvalid: comment.body.length > 180,
+    };
+});
+
+console.log(checkedComments);
+
+
+// Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть то же самое с помощью метода map
+
+// Способ 1: reduce
+const emailsByReduce = comments.reduce((acc, comment) => {
+    acc.push(comment.email);
+    return acc;
+}, []);
+
+console.log(emailsByReduce);
+
+// Способ 2: map
+const emailsByMap = comments.map((comment) => comment.email);
+
+console.log(emailsByMap);
+
+
+// Почитать про методы toString(), join() и, перебрав массив с задания №11,привести его к строке
+
+const emailsString1 = emailsByMap.toString();
+const emailsString2 = emailsByMap.join(', ');
+
+console.log(emailsString1);
+console.log(emailsString2);
