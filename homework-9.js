@@ -1,6 +1,8 @@
+import { comments } from "./comments.js";
+
 // Создать массив чисел от 1 до 10. Отфильтровать его таким образом, что бы мы получил массив чисел, начиная с 5.
 const numbers = [1,2,3,4,5,6,7,8,9,10];
-const numbersFromFive = numbers.filter(el => el > 4);
+const numbersFromFive = numbers.filter( el=> el > 4);
 
 console.log(numbersFromFive);
 
@@ -28,4 +30,12 @@ console.log(reversedFilms);
 
 
 // Добавить файл comments.js, в нём создать константу и в него поместить первые 10 объектов этого массива. Данный массив представляет собой пример комментариев в соц. сетях, поэтому переменная должна быть названа по смыслу. Не забудьте удалить квадратные кавычки у ключей объектов (можно использовать Chat GPT, что бы не делать это вручную)
+console.log(comments);
 
+
+
+// Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
+const commentsWithCom = comments.filter(comment => comment.email.includes('.com'))
+const commentsWithCom1 = comments.filter(comment => comment.email.includes('.com') &&  comment.postId === 1);
+console.log(commentsWithCom)
+console.log(commentsWithCom1)
