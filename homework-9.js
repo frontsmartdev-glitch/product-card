@@ -12,10 +12,7 @@ const hasMatrix = films.includes('Матрица');
 
 console.log(hasMatrix);
 
-
 // Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть.
-
-
 
 function reverseArray(arr) {
     return arr.reverse();
@@ -27,19 +24,14 @@ const reversedFilms = reverseArray(films);
 console.log(reversedNumbers);
 console.log(reversedFilms);
 
-
-
 // Добавить файл comments.js, в нём создать константу и в него поместить первые 10 объектов этого массива. Данный массив представляет собой пример комментариев в соц. сетях, поэтому переменная должна быть названа по смыслу. Не забудьте удалить квадратные кавычки у ключей объектов (можно использовать Chat GPT, что бы не делать это вручную)
 console.log(comments);
-
-
 
 // Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 const commentsWithCom = comments.filter(comment => comment.email.includes('.com'))
 console.log(commentsWithCom)
 
 // Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
-
 
 const updateComment = comments.map((comment) => {
     if (comment.id <= 5) {
@@ -68,7 +60,6 @@ const shortComment = comments.map((comment) => {
 
 console.log(shortComment)
 
-
 // Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
 
 const checkedComments = comments.map((comment) => {
@@ -79,7 +70,6 @@ const checkedComments = comments.map((comment) => {
 });
 
 console.log(checkedComments);
-
 
 // Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть то же самое с помощью метода map
 
@@ -95,7 +85,6 @@ console.log(emailsByReduce);
 const emailsByMap = comments.map((comment) => comment.email);
 
 console.log(emailsByMap);
-
 
 // Почитать про методы toString(), join() и, перебрав массив с задания №11,привести его к строке
 
