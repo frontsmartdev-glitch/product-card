@@ -34,16 +34,9 @@ console.log(commentsWithCom)
 // Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
 const updateComment = comments.map((comment) => {
-    if (comment.id <= 5) {
-        return {
-            ...comment,
-            postId: 2,
-        };
-    } else {
-        return {
-            ...comment,
-            postId: 1,
-        };
+    return {
+        ...comment,
+        postId: comment.id <= 5 ? 2 : 1,
     }
 });
 
