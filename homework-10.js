@@ -11,7 +11,7 @@ const titleToDescription = products.reduce((acc, product) => {
 
 console.log(titleToDescription);
 
-// Задание функция 1 — спрашивает количество
+// Задание функция 1 количество
 function getCardsCount() {
     const answer = prompt('Сколько карточек отобразить? От 1 до 5');
     const count = Number(answer);
